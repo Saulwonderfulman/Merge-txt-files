@@ -1,25 +1,24 @@
 @echo off
 
-set /p folderPath=ÎÄ¼þ¼ÐÂ·¾¶£º
-
+set /p folderPath=文件夹路径：
 cd %folderPath%
 
 set mergeFile=merge.txt
-rem set totalSize=0
+set totalSize=0
 
 for %%F in (*.txt) do (
     if not "%%F"=="merge.txt" (
         type "%%F" >> "%mergeFile%"
-rem         set /a size=%%~zF
-rem         set /a totalSize+=size
+        set /a size=%%~zF
+        set /a totalSize+=size
     )
 )
-rem echo Total size of all .txt files: %totalSize% bytes
+echo Total size of all .txt files: %totalSize% bytes
 
-rem for %%F in (*.txt) do (
-rem     if "%%F"=="merge.txt" (
-rem         echo The size of merge.txt: %%F, Size: %%~zF bytes
-rem     )
-rem )
+for %%F in (*.txt) do (
+    if "%%F"=="merge.txt" (
+        echo The size of merge.txt: %%F, Size: %%~zF bytes
+    )
+)
 
 pause
