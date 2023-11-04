@@ -1,6 +1,6 @@
 @echo off
 
-set /p folderPath=文件夹路径：
+set /p folderPath=脦脛录镁录脨脗路戮露拢潞
 
 cd %folderPath%
 
