@@ -1,6 +1,6 @@
 @echo off
 
-set /p folderPath=文件夹路径：
+set /p folderPath=Folder Path：
 cd %folderPath%
 
 set mergeFile=merge.txt
